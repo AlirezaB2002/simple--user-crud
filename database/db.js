@@ -55,8 +55,8 @@ module.exports = class Database {
         if(result.deletedCount === 0) {
             return { isError: true, message: 'Document not found!', status: 404 };
         }
-        console.log("User Deleted successfully!");
-        return { isError: false, message: 'User Deleted successfully!', status: 200 };
+        console.log("Document Deleted successfully!");
+        return { isError: false, message: 'Document Deleted successfully!', status: 200 };
     }
     async updateOne (query, data, collectionName) {
         const collection = await this.#getCollection(collectionName);
@@ -66,6 +66,6 @@ module.exports = class Database {
         if(result.modifiedCount === 0) {
             return { isError: true, message: 'Document not found!', status: 404 };
         }
-        return { isError: false, message: 'User Updated Successfully!',body :result  ,status: 200 };
+        return { isError: false, message: 'Document Updated Successfully!',body :result  ,status: 200 };
     }
 }
